@@ -1,8 +1,5 @@
-import React from "react";
-import { Navbar } from "../components";
-
 const Home = () => {
-  return <div>س</div>;
+  return <div className="h-[1000px] bg-black"></div>;
 };
 
 export default Home;

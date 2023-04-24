@@ -6,6 +6,13 @@ export {
     FingerPrintIcon,
     SquaresPlusIcon,
     XMarkIcon,
+    MagnifyingGlassIcon,
+    ShoppingCartIcon,
+    MapPinIcon,
+    EnvelopeOpenIcon,
+    DevicePhoneMobileIcon
+
+
 } from "@heroicons/react/24/outline";
 export {
     ChevronDownIcon,
