@@ -13,3 +13,20 @@
     }
   }
 }
+.btn {
+  @apply bg-red-light hover:bg-transparent border border-red-light hover:text-red-light transition-all text-white font-medium text-base;
+  @apply py-2 px-4;
+  @apply rounded;
+}
+
+.btn-outline {
+  @apply bg-transparent border-red-light text-red-light hover:bg-red-light hover:text-white;
+  @apply py-2 px-4;
+  @apply rounded;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-transparent border-white hover:border-none hover:text-white  text-gray-dark;
+  @apply py-2 px-4;
+  @apply rounded;
+}

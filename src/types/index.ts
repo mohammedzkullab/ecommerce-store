@@ -48,3 +48,23 @@ export interface LinkType {
     children: Children;
     className?: string;
 }
+
+
+export interface ButtonOptions {
+    /**
+     * Button display variants
+     * @default "solid"
+     * @type ButtonVariant
+     */
+    variant?: ButtonVariant;
+}
+
+export type RefType = HTMLButtonElement;
+
+export type ButtonVariant = "outline" | "primary" | "secondary";
+
+export type ButtonProps = React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+> &
+    ButtonOptions;

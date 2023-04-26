@@ -1,3 +1,4 @@
+import { Button } from "components";
 import ImageGrid from "components/ImageGrid";
 import { FOOTER_IMAGES, FOOTER_NAVIGATION } from "layouts/MainLayout/data";
 import {
@@ -38,12 +39,9 @@ export default function Footer() {
               placeholder="Enter your email"
             />
             <div className="mt-4 rounded-md sm:mt-0 sm:ml-4 sm:flex-shrink-0">
-              <button
-                type="submit"
-                className="flex w-full items-center justify-center rounded-md  py-1.5 px-3 text-base font-semibold leading-7 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400 sm:text-sm sm:leading-6"
-              >
+              <Button variant="outline" type="submit" className="flex w-full ">
                 Subscribe
-              </button>
+              </Button>
             </div>
           </form>
         </div>
