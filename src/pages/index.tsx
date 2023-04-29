@@ -1,12 +1,39 @@
-import { Button } from "components";
+import { Slider } from "components";
+import NoSSR from "components/NoSSR";
 
+const SLIDES = [
+  {
+    image: "https://source.unsplash.com/random",
+    content: {
+      badge: "badge",
+      heading: "heading",
+      paragraph: "paraa",
+    },
+  },
+  {
+    image: "https://source.unsplash.com/random",
+    content: {
+      badge: "sssssss",
+      heading: "ssssss",
+      paragraph: "sssssss",
+    },
+  },
+  {
+    image: "https://source.unsplash.com/random",
+    content: {
+      badge: "sssssss",
+      heading: "ssssss",
+      paragraph: "sssssss",
+    },
+  },
+];
 const Home = () => {
   return (
-    <div className="h-[1000px] pt-40 bg-black">
-      <Button>ssssss</Button>
-      <Button variant="outline">ssssss</Button>
-      <Button variant="secondary">ssssss</Button>
-    </div>
+    <NoSSR>
+      <div className="">
+        <Slider slides={SLIDES} />
+      </div>
+    </NoSSR>
   );
 };
 

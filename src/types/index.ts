@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import { type } from "os";
 import type {
     ReactElement,
     ReactNode,
@@ -68,3 +69,26 @@ export type ButtonProps = React.DetailedHTMLProps<
     HTMLButtonElement
 > &
     ButtonOptions;
+
+export type slideType = {
+    image: string;
+    content: {
+        badge: string;
+        heading: string;
+        paragraph: string;
+    },
+}
+export interface SliderProps {
+    slides: slideType[];
+    className?: string;
+    slidesPerView?: number;
+    spaceBetween?: number;
+    navigation?: {} | boolean;
+    pagination?: any;
+    onSwiper?: Function;
+    onSlideChange?: Function;
+    cssMode?: boolean;
+    mousewheel?: boolean;
+    keyboard?: boolean;
+    modules?: [];
+}

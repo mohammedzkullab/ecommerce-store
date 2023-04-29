@@ -30,3 +30,15 @@
   @apply py-2 px-4;
   @apply rounded;
 }
+
+.slider-center {
+  @apply flex items-center justify-center w-full h-full relative;
+  @apply text-center text-white;
+}
+
+.slider-image {
+  @apply w-full h-full absolute inset-0 -z-10;
+}
+.overlay {
+  @apply bg-black/50 absolute inset-0 z-10 w-full h-full;
+}
