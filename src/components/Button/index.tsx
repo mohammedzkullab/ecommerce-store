@@ -1,6 +1,8 @@
 import { forwardRef } from "react";
 import clsx from "clsx";
-import { ButtonProps, ButtonVariant, RefType } from "types";
+
+import { ButtonProps, RefType } from "components/types";
+
 import { getVariant } from "utils";
 
 export const Button = forwardRef<RefType, ButtonProps>((props, ref) => {

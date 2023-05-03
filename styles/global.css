@@ -13,22 +13,24 @@
     }
   }
 }
+
+* {
+  @apply !transition-all;
+}
 .btn {
-  @apply bg-red-light hover:bg-transparent border border-red-light hover:text-red-light transition-all text-white font-medium text-base;
-  @apply py-2 px-4;
+  @apply transition-all font-medium text-base;
+  @apply p-2;
   @apply rounded;
 }
-
+.btn-primary {
+  @apply bg-red-light hover:bg-transparent border border-red-light hover:text-red-light text-white;
+}
 .btn-outline {
   @apply bg-transparent border-red-light text-red-light hover:bg-red-light hover:text-white;
-  @apply py-2 px-4;
-  @apply rounded;
 }
 
 .btn-secondary {
-  @apply bg-white hover:bg-transparent border-white hover:border-none hover:text-white  text-gray-dark;
-  @apply py-2 px-4;
-  @apply rounded;
+  @apply bg-white hover:bg-transparent border-white hover:border-none hover:text-white text-gray-dark;
 }
 
 .slider-center {
@@ -41,4 +43,9 @@
 }
 .overlay {
   @apply bg-black/50 absolute inset-0 z-10 w-full h-full;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  @apply text-gray-900 transition-all bg-white px-4 py-3 hover:bg-red-light hover:text-white !text-xl font-semibold;
 }

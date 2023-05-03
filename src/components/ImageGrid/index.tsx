@@ -1,15 +1,7 @@
 import { Link } from "components";
+import { ImageGridProps, ImageGridType } from "components/types";
 import Image from "next/image";
 
-export type ImageGridType = {
-  title?: string;
-  size?: string;
-  source: string;
-  link: string;
-};
-export interface ImageGridProps {
-  files: ImageGridType[];
-}
 export default function ImageGrid({ files }: ImageGridProps) {
   return (
     <ul

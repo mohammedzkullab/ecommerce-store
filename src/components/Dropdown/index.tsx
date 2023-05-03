@@ -1,7 +1,11 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "lib/@headlessUi";
 import { ChevronDownIcon } from "lib/@heroicons";
-import { DropdownItemsType, DropdownType, callsToActionType } from "types";
+import {
+  DropdownItemsType,
+  DropdownType,
+  callsToActionType,
+} from "components/types";
 
 export const Dropdown = ({
   title,

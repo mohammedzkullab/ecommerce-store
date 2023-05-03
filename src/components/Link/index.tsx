@@ -1,4 +1,4 @@
-import { LinkType } from "types";
+import { LinkType } from "components/types";
 import NextLink from "next/link";
 
 const Link = ({ href = "#", children, className, ...rest }: LinkType) => {

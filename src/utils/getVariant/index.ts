@@ -1,4 +1,4 @@
-import { ButtonVariant } from "types";
+import { ButtonVariant } from "components/types";
 
 export const getVariant = (variant: ButtonVariant) => {
     switch (variant) {
@@ -6,7 +6,9 @@ export const getVariant = (variant: ButtonVariant) => {
             return "btn-outline";
         case "secondary":
             return "btn-secondary";
+        case "primary":
+            return "btn-primary";
         default:
-            return undefined;
+            return undefined
     }
 };

@@ -1,37 +1,11 @@
-import { Slider } from "components";
-import NoSSR from "components/NoSSR";
+import { Slider, NoSSR } from "components";
+import { HOMEPAGE_MAIN_SLIDES } from "data";
 
-const SLIDES = [
-  {
-    image: "https://source.unsplash.com/random",
-    content: {
-      badge: "badge",
-      heading: "heading",
-      paragraph: "paraa",
-    },
-  },
-  {
-    image: "https://source.unsplash.com/random",
-    content: {
-      badge: "sssssss",
-      heading: "ssssss",
-      paragraph: "sssssss",
-    },
-  },
-  {
-    image: "https://source.unsplash.com/random",
-    content: {
-      badge: "sssssss",
-      heading: "ssssss",
-      paragraph: "sssssss",
-    },
-  },
-];
 const Home = () => {
   return (
     <NoSSR>
       <div className="">
-        <Slider slides={SLIDES} />
+        <Slider slides={HOMEPAGE_MAIN_SLIDES} />
       </div>
     </NoSSR>
   );

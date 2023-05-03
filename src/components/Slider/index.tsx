@@ -1,4 +1,4 @@
-import { SliderProps } from "types";
+import { SliderProps } from "../types";
 
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,6 +17,8 @@ export const Slider = ({
   mousewheel = true,
   keyboard = true,
   modules = [],
+  lazyPreloadPrevNext = 1,
+  loop = true,
   ...rest
 }: SliderProps) => {
   return (
@@ -30,6 +32,8 @@ export const Slider = ({
       cssMode={cssMode}
       mousewheel={mousewheel}
       keyboard={keyboard}
+      lazyPreloadPrevNext={lazyPreloadPrevNext}
+      loop={loop}
       modules={[Navigation, Pagination, Mousewheel, Keyboard, ...modules]}
       {...rest}
     >
