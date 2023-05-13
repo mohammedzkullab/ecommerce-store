@@ -1,21 +1,17 @@
 export {
-    ArrowPathIcon,
-    Bars3Icon,
-    ChartPieIcon,
-    CursorArrowRaysIcon,
-    FingerPrintIcon,
-    SquaresPlusIcon,
-    XMarkIcon,
-    MagnifyingGlassIcon,
-    ShoppingCartIcon,
-    MapPinIcon,
-    EnvelopeOpenIcon,
-    DevicePhoneMobileIcon
-
-
-} from "@heroicons/react/24/outline";
-export {
-    ChevronDownIcon,
-    PhoneIcon,
-    PlayCircleIcon,
-} from "@heroicons/react/20/solid";
+    HiArrowPath as ArrowPathIcon,
+    HiOutlineBars3 as Bars3Icon,
+    HiOutlineChartPie as ChartPieIcon,
+    HiOutlineCursorArrowRays as CursorArrowRaysIcon,
+    HiOutlineFingerPrint as FingerPrintIcon,
+    HiOutlineSquaresPlus as SquaresPlusIcon,
+    HiOutlineXMark as XMarkIcon,
+    HiOutlineMagnifyingGlass as MagnifyingGlassIcon,
+    HiOutlineShoppingCart as ShoppingCartIcon,
+    HiMapPin as MapPinIcon,
+    HiOutlineEnvelopeOpen as EnvelopeOpenIcon,
+    HiOutlineDevicePhoneMobile as DevicePhoneMobileIcon,
+    HiOutlineChevronDown as ChevronDownIcon,
+    HiPhone as PhoneIcon,
+    HiPlayCircle as PlayCircleIcon,
+} from "react-icons/hi2";

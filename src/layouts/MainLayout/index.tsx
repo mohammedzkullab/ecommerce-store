@@ -9,19 +9,17 @@ const MainLayout = ({
   pageDescription = "Talents Valley platform",
 }: MainLayoutProps) => {
   return (
-    <>
+    <div className="min-h-fit scroll-smooth relative">
       <Head>
         <title>{title}</title>
         <meta name="description" content={pageDescription} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main className={`min-h-fit scroll-smooth ${mainClassName ?? ""}`}>
-        {children}
-      </main>
+      <main className={`${mainClassName ?? ""}`}>{children}</main>
       <ReturnTop />
       <Footer />
-    </>
+    </div>
   );
 };
 

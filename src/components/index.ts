@@ -6,6 +6,7 @@ export { default as Logo } from "./Logo"
 export { default as Navlink } from "./Navlink"
 export { default as NoSSR } from "./NoSSR"
 export { default as Slider } from "./Slider"
+export { default as Card } from "./Card"
 
 
 

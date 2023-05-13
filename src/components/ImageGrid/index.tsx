@@ -8,23 +8,23 @@ export default function ImageGrid({ files }: ImageGridProps) {
       role="list"
       className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-2"
     >
-      {files.map((file: ImageGridType, index: number) => (
+      {files?.map((file: ImageGridType, index: number) => (
         <li key={index} className="relative">
-          <div className="group aspect-w-12 aspect-h-15 block w-full overflow-hidden rounded-lg bg-gray-100  ">
+          <div className="block w-full overflow-hidden bg-gray-100 rounded-lg group aspect-w-12 aspect-h-15 ">
             <Link href={file?.link}>
               <Image
                 src={file.source}
                 alt=""
                 width={180}
                 height={180}
-                className="pointer-events-none object-cover group-hover:opacity-75 h-full w-full"
+                className="object-cover w-full h-full pointer-events-none group-hover:opacity-75"
               />
             </Link>
           </div>
-          <p className="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+          <p className="block mt-2 text-sm font-medium text-gray-900 truncate pointer-events-none">
             {file.title}
           </p>
-          <p className="pointer-events-none block text-sm font-medium text-gray-500">
+          <p className="block text-sm font-medium text-gray-500 pointer-events-none">
             {file.size}
           </p>
         </li>

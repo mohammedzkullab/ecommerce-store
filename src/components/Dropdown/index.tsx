@@ -17,10 +17,10 @@ export const Dropdown = ({
   return (
     <Popover.Group className={`text-white ${className}`} {...rest}>
       <Popover className="relative">
-        <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 outline-none ">
+        <Popover.Button className="flex items-center text-sm font-semibold leading-6 outline-none gap-x-1 ">
           {title}
           <ChevronDownIcon
-            className="h-5 w-5 flex-none text-gray-400"
+            className="flex-none w-5 h-5 text-gray-400"
             aria-hidden="true"
           />
         </Popover.Button>
@@ -34,16 +34,16 @@ export const Dropdown = ({
           leaveFrom="opacity-100 translate-y-0"
           leaveTo="opacity-0 translate-y-1"
         >
-          <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+          <Popover.Panel className="absolute z-10 w-screen max-w-md mt-3 overflow-hidden bg-white shadow-lg -left-8 top-full rounded-3xl ring-1 ring-gray-900/5">
             <div className="p-4">
-              {items.map((item: DropdownItemsType) => (
+              {items?.map((item: DropdownItemsType) => (
                 <div
                   key={item.name}
-                  className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                  className="relative flex items-center p-4 text-sm leading-6 rounded-lg group gap-x-6 hover:bg-gray-50"
                 >
-                  <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                  <div className="flex items-center justify-center flex-none rounded-lg h-11 w-11 bg-gray-50 group-hover:bg-white">
                     <item.icon
-                      className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                      className="w-6 h-6 text-gray-600 group-hover:text-indigo-600"
                       aria-hidden="true"
                     />
                   </div>
@@ -68,7 +68,7 @@ export const Dropdown = ({
                   className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
                 >
                   <item.icon
-                    className="h-5 w-5 flex-none text-gray-400"
+                    className="flex-none w-5 h-5 text-gray-400"
                     aria-hidden="true"
                   />
                   {item.name}

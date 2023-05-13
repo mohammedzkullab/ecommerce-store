@@ -7,9 +7,9 @@
     margin-right: auto;
     margin-left: auto;
   }
-  @media (min-width: 1536px) {
+  @media (min-width: 1400px) {
     .container {
-      max-width: 1470px;
+      max-width: 1320px;
     }
   }
 }
@@ -18,31 +18,32 @@
   @apply !transition-all;
 }
 .btn {
-  @apply transition-all font-medium text-base;
+  @apply text-base font-medium transition-all;
   @apply p-2;
-  @apply rounded;
+  @apply border rounded;
 }
 .btn-primary {
-  @apply bg-red-light hover:bg-transparent border border-red-light hover:text-red-light text-white;
+  @apply text-white bg-red-light hover:bg-transparent border-red-light hover:text-red-light;
 }
 .btn-outline {
   @apply bg-transparent border-red-light text-red-light hover:bg-red-light hover:text-white;
 }
 
 .btn-secondary {
-  @apply bg-white hover:bg-transparent border-white hover:border-none hover:text-white text-gray-dark;
+  @apply bg-white border-white hover:bg-transparent hover:border-none hover:text-white text-gray-dark;
 }
 
 .slider-center {
-  @apply flex items-center justify-center w-full h-full relative;
+  @apply relative flex flex-col items-center justify-center w-full;
   @apply text-center text-white;
 }
 
 .slider-image {
-  @apply w-full h-full absolute inset-0 -z-10;
+  @apply absolute inset-0 w-full h-full -z-10;
 }
 .overlay {
-  @apply bg-black/50 absolute inset-0 z-10 w-full h-full;
+  @apply absolute w-full h-full bg-black/50;
+  z-index: -1 !important;
 }
 
 .swiper-button-prev::after,

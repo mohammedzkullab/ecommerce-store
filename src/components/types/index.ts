@@ -56,8 +56,15 @@ export type slideType = {
         paragraph: string;
     },
 }
+type breakpointsType = {
+    [breakpoint: number]: {
+        slidesPerView: number,
+        spaceBetween: number,
+    }
+}
 export interface SliderProps {
-    slides: slideType[];
+    slides: slideType[] | any[];
+    slideShape: (slide: any, index: number) => Children;
     className?: string;
     slidesPerView?: number;
     spaceBetween?: number;
@@ -71,6 +78,7 @@ export interface SliderProps {
     modules?: [];
     lazyPreloadPrevNext?: number;
     loop?: boolean;
+    breakpoints?: breakpointsType;
 }
 
 export type ImageGridType = {
