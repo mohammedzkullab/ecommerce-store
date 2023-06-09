@@ -15,6 +15,7 @@ const Logo = ({ src = LogoPath, alt = "Store Logo", className }: LogoType) => {
           className={logoClasses}
           width={138}
           height={55}
+          priority={true}
           src={src}
           alt={alt}
         />

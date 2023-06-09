@@ -10,6 +10,10 @@ module.exports = {
         red: {
           light: "#ff324d",
         },
+        black: {
+          DEFAULT: "#000",
+          primary: "#292b2c",
+        },
       },
       backgroundImage: {
         "hero-image1": "url('/assets/img/1.png')",

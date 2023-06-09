@@ -39,7 +39,7 @@
 }
 
 .slider-image {
-  @apply absolute inset-0 w-full h-full -z-10;
+  @apply absolute inset-0 w-full h-full z-[-1];
 }
 .overlay {
   @apply absolute w-full h-full bg-black/50;

@@ -28,7 +28,7 @@ export default function Navbar() {
       )}
     >
       <nav
-        className=" flex container items-center justify-between p-6 lg:px-8"
+        className="container flex items-center justify-between p-4  lg:px-8"
         aria-label="Global"
       >
         <Logo />
@@ -39,13 +39,13 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6 text-white" aria-hidden="true" />
+            <Bars3Icon className="w-6 h-6 text-white" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden lg:flex items-center lg:gap-x-12">
+        <div className="items-center hidden lg:flex lg:gap-x-12">
           <Navlinks />
         </div>
-        <div className="hidden lg:flex lg:flex-1 gap-3 lg:justify-end">
+        <div className="hidden gap-3 lg:flex lg:flex-1 lg:justify-end">
           <MagnifyingGlassIcon width={30} height={30} color="white" />
           <ShoppingCartIcon width={30} height={30} color="white" />
         </div>
@@ -58,7 +58,7 @@ export default function Navbar() {
           onClose={setMobileMenuOpen}
         >
           <div className="fixed inset-0" />
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white text-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full px-6 py-6 overflow-y-auto text-white bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-end">
               <button
                 type="button"
@@ -66,14 +66,14 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <XMarkIcon
-                  className="h-6 w-6 cursor-pointer"
+                  className="w-6 h-6 cursor-pointer"
                   aria-hidden="true"
                 />
               </button>
             </div>
-            <div className="mt-6 flow-root ">
+            <div className="flow-root mt-6 ">
               <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="py-6 flex justify-around">
+                <div className="flex justify-around py-6">
                   <MagnifyingGlassIcon
                     width={30}
                     height={30}
@@ -85,7 +85,7 @@ export default function Navbar() {
                     className="text-gray-900"
                   />
                 </div>
-                <div className="space-y-2 py-6">
+                <div className="py-6 space-y-2">
                   <Navlinks navlinkClass="!text-gray-900" />
                 </div>
               </div>
