@@ -13,7 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export const Slider = ({
   slides,
-  className = " text-black",
+  className = "text-black ",
   slideShape,
   spaceBetween = 0,
   slidesPerView = 1,
@@ -51,6 +51,7 @@ export const Slider = ({
       keyboard={keyboard}
       lazyPreloadPrevNext={lazyPreloadPrevNext}
       loop={loop}
+      speed={4000}
       modules={[
         Navigation,
         Pagination,

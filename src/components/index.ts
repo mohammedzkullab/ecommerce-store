@@ -8,6 +8,7 @@ export { default as NoSSR } from "./NoSSR"
 export { default as Slider } from "./Slider"
 export { default as Card } from "./Card"
 export { default as Product } from "./Product"
+export { default as StarRating } from "./StarRating"
 
 
 
