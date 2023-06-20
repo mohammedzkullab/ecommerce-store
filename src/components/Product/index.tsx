@@ -9,7 +9,7 @@ const Product = ({ productData, link = "#" }: ProductProps) => {
   const { image, price, rating, title } = productData;
   return (
     // <Link href={link}>
-    <Card className=" mx-4 my-2 border border-[#ddd] transition-all p-0">
+    <Card className=" mx-4 my-2 border border-[#ddd] transition-all cursor-pointer p-0">
       <div className="">
         <div className="relative flex items-center justify-center aspect-square md:p-4 ">
           <Image src={image} alt={title} width={280} height={357} />

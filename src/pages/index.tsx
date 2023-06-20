@@ -18,7 +18,6 @@ const Home = () => {
             blandit massa enim Nullam nunc varius.
           </p>
         </div>
-        <Product productData={TEST_PRODUCT} />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
           <Product productData={TEST_PRODUCT} />
           <Product productData={TEST_PRODUCT} />

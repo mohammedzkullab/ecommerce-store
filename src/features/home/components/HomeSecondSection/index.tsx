@@ -1,21 +1,21 @@
-import { Button, Card, Link, Slider } from "components";
+import { Button, Card, Container, Link, Slider } from "components";
 import { HOMEPAGE_SECOND_SLIDES } from "data";
 import React from "react";
 
+const BREAKPOINTS = {
+  320: {
+    slidesPerView: 2,
+    spaceBetween: 20,
+  },
+  640: {
+    slidesPerView: 4,
+    spaceBetween: 20,
+  },
+};
 export const HomeSecondSection = () => {
-  const breakpoints = {
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    640: {
-      slidesPerView: 4,
-      spaceBetween: 20,
-    },
-  };
   return (
     <div className="absolute z-[1] w-full -mt-14">
-      <div className="container">
+      <Container>
         <Card>
           <div className="items-center w-full grid-cols-3 gap-4 px-6 md:grid">
             <div className="text-center md:text-left">
@@ -37,12 +37,12 @@ export const HomeSecondSection = () => {
                 )}
                 className="cursor-pointer"
                 slides={HOMEPAGE_SECOND_SLIDES}
-                breakpoints={breakpoints}
+                breakpoints={BREAKPOINTS}
               />
             </div>
           </div>
         </Card>
-      </div>
+      </Container>
     </div>
   );
 };
@@ -54,11 +54,16 @@ type SlideProps = {
     label: string;
   };
   index: number;
+  className?: string;
 };
-const Slide = ({ slide, index }: SlideProps) => {
+const Slide = ({ slide, index, className }: SlideProps) => {
   return (
     <Link href="/shop">
-      <div className="flex flex-col items-center justify-center gap-2 px-5 py-12 text-center truncate bg-gray-100 text-black-primary hover:text-red-light">
+      <div
+        className={`flex flex-col items-center justify-center gap-2 px-5 py-12 text-center truncate bg-gray-100 text-black-primary hover:text-red-light ${
+          className || ""
+        }`}
+      >
         <span>
           {React.createElement(slide?.icon, {
             className: "w-9 h-9",

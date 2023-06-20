@@ -103,3 +103,11 @@ export type NavlinkProps = {
     children: Children;
     className?: string;
 }
+
+export type StarRatingProps = {
+    rate: number;
+    count: number | string;
+    starsNumber?: number;
+    className?: string;
+    readOnly?: boolean;
+}
