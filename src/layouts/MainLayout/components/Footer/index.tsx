@@ -59,29 +59,17 @@ export default function Footer() {
                   </h3>
                   <ul role="list" className="mt-6 space-y-4">
                     <li className="flex text-sm leading-6 text-gray-300 md:gap-3 ">
-                      <MapPinIcon
-                        width={30}
-                        height={30}
-                        className="hidden md:block"
-                      />
+                      <MapPinIcon className="hidden w-5 h-5 md:block" />
                       <span>
                         123 Street, Old Trafford, New South London , UK
                       </span>
                     </li>
                     <li className="flex text-sm leading-6 text-gray-300 md:gap-3 ">
-                      <EnvelopeOpenIcon
-                        width={20}
-                        height={20}
-                        className="hidden md:block"
-                      />
+                      <EnvelopeOpenIcon className="hidden w-5 h-5 md:block" />
                       info@sitename.com
                     </li>
                     <li className="flex text-sm leading-6 text-gray-300 md:gap-3 ">
-                      <DevicePhoneMobileIcon
-                        width={20}
-                        height={20}
-                        className="hidden md:block"
-                      />
+                      <DevicePhoneMobileIcon className="hidden w-5 h-5 md:block" />
                       + 457 789 789 65
                     </li>
                   </ul>

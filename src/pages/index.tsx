@@ -12,7 +12,7 @@ const Home = () => {
       </div>
       <div className="container pt-8 text-center">
         <div className="max-w-lg m-auto">
-          <h2 className="text-4xl font-bold ">Our Top Products</h2>
+          <h2 className="text-3xl font-bold ">Our Top Products</h2>
           <p className="my-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
             blandit massa enim Nullam nunc varius.

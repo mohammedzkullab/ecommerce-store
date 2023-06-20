@@ -1,11 +1,14 @@
-import Card from "components/Card";
 import React from "react";
 import { ProductProps } from "types";
 import Image from "next/image";
+import Link from "next/link";
+import Card from "components/Card";
 import StarRating from "components/StarRating";
-const Product = ({ productData }: ProductProps) => {
+
+const Product = ({ productData, link = "#" }: ProductProps) => {
   const { image, price, rating, title } = productData;
   return (
+    // <Link href={link}>
     <Card className=" mx-4 my-2 border border-[#ddd] transition-all p-0">
       <div className="">
         <div className="relative flex items-center justify-center aspect-square md:p-4 ">
@@ -22,6 +25,7 @@ const Product = ({ productData }: ProductProps) => {
         </div>
       </div>
     </Card>
+    // </Link>
   );
 };
 
