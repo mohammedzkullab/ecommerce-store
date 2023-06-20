@@ -15,7 +15,7 @@ const Product = ({ productData, link = "#" }: ProductProps) => {
           <Image src={image} alt={title} width={280} height={357} />
           <div className="absolute flex items-center justify-center w-full h-full rounded-lg rounded-b-none hover:backdrop-brightness-75"></div>
         </div>
-        <div className="p-4 product-details">
+        <div className="p-4 text-center product-details">
           <h3 className="my-2 font-semibold truncate">{title}</h3>
           <p className="font-medium text-red-light">
             ${price}{" "}

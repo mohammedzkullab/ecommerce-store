@@ -1,7 +1,7 @@
-import { NoSSR, Product } from "components";
+import { NoSSR } from "components";
+import ProductsGrid from "components/ProductsGrid";
 import { TEST_PRODUCT } from "data";
 import { HomeSlider, HomeSecondSection } from "features/home";
-import React from "react";
 
 const Home = () => {
   return (
@@ -18,13 +18,16 @@ const Home = () => {
             blandit massa enim Nullam nunc varius.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
-          <Product productData={TEST_PRODUCT} />
-          <Product productData={TEST_PRODUCT} />
-          <Product productData={TEST_PRODUCT} />
-          <Product productData={TEST_PRODUCT} />
-        </div>
       </div>
+      <ProductsGrid
+        products={[
+          TEST_PRODUCT,
+          TEST_PRODUCT,
+          TEST_PRODUCT,
+          TEST_PRODUCT,
+          TEST_PRODUCT,
+        ]}
+      />
     </NoSSR>
   );
 };
