@@ -43,7 +43,7 @@ export const Slider = ({
       // spaceBetween={spaceBetween}
       // slidesPerView={slidesPerView}
       navigation={navigation}
-      pagination={...pagination}
+      pagination={pagination}
       onSwiper={() => onSwiper()}
       onSlideChange={() => onSlideChange()}
       // cssMode={cssMode}
