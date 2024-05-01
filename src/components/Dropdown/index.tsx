@@ -36,29 +36,33 @@ export const Dropdown = ({
         >
           <Popover.Panel className="absolute z-10 w-screen max-w-md mt-3 overflow-hidden bg-white shadow-lg -left-8 top-full rounded-3xl ring-1 ring-gray-900/5">
             <div className="p-4">
-              {items?.map((item: DropdownItemsType) => (
-                <div
-                  key={item.name}
-                  className="relative flex items-center p-4 text-sm leading-6 rounded-lg group gap-x-6 hover:bg-gray-50"
-                >
-                  <div className="flex items-center justify-center flex-none rounded-lg h-11 w-11 bg-gray-50 group-hover:bg-white">
-                    <item.icon
-                      className="w-6 h-6 text-gray-600 group-hover:text-indigo-600"
-                      aria-hidden="true"
-                    />
+              {items.length > 0 ? (
+                items?.map((item: DropdownItemsType) => (
+                  <div
+                    key={item.name}
+                    className="relative flex items-center p-4 text-sm leading-6 rounded-lg group gap-x-6 hover:bg-gray-50"
+                  >
+                    <div className="flex items-center justify-center flex-none rounded-lg h-11 w-11 bg-gray-50 group-hover:bg-white">
+                      <item.icon
+                        className="w-6 h-6 text-gray-600 group-hover:text-indigo-600"
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <div className="flex-auto">
+                      <a
+                        href={item.href}
+                        className="block font-semibold text-gray-900"
+                      >
+                        {item.name}
+                        <span className="absolute inset-0" />
+                      </a>
+                      <p className="mt-1 text-gray-600">{item.description}</p>
+                    </div>
                   </div>
-                  <div className="flex-auto">
-                    <a
-                      href={item.href}
-                      className="block font-semibold text-gray-900"
-                    >
-                      {item.name}
-                      <span className="absolute inset-0" />
-                    </a>
-                    <p className="mt-1 text-gray-600">{item.description}</p>
-                  </div>
-                </div>
-              ))}
+                ))
+              ) : (
+                <>No items !</>
+              )}
             </div>
             <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
               {callsToAction?.map((item: callsToActionType) => (
