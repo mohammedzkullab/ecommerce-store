@@ -14,7 +14,7 @@ export default function ImageGrid({ files }: ImageGridProps) {
             <Link href={file?.link}>
               <Image
                 src={file.source}
-                alt=""
+                alt={file.alt}
                 width={180}
                 height={180}
                 className="object-cover w-full h-full pointer-events-none group-hover:opacity-75"
