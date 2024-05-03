@@ -2,7 +2,7 @@ import { Product, Container } from "components";
 import React from "react";
 import { ProductType } from "types";
 
-const ProductsGrid = ({ products }: { products: ProductType[] }) => {
+export const ProductsGrid = ({ products }: { products: ProductType[] }) => {
   return (
     <Container>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
