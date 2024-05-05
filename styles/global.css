@@ -30,7 +30,7 @@
 }
 
 .btn-secondary {
-  @apply bg-white border-white hover:bg-transparent hover:border-none hover:text-white text-gray-dark;
+  @apply bg-white border-white hover:bg-transparent hover:text-white text-gray-dark;
 }
 
 .slider-center {
@@ -49,4 +49,9 @@
 .swiper-button-prev::after,
 .swiper-button-next::after {
   @apply text-gray-900 transition-all bg-white px-4 py-3 hover:bg-red-light hover:text-white !text-xl font-semibold;
+}
+
+.image-backdrop:hover .back,
+.image-backdrop:hover .add-to-cart {
+  @apply !opacity-100 backdrop-brightness-75 z-[1];
 }
