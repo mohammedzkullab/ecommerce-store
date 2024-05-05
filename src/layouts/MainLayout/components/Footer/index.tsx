@@ -43,7 +43,7 @@ export default function Footer() {
                 <Button
                   variant="outline"
                   type="submit"
-                  className="flex w-full "
+                  className="w-full text-center "
                 >
                   Subscribe
                 </Button>
