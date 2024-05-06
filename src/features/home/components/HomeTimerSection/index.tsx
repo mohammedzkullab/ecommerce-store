@@ -1,31 +1,23 @@
 import { Button, Container } from "components";
 import React from "react";
+import CountdownTimer from "./CountDownCounter";
 
 export const HomeTimerSection = () => {
+  const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
+  const NOW_IN_MS = new Date().getTime();
+
+  const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
   return (
-    <div className="pb-[30px] md:pb-[70px] bg-timer-bg bg-cover bg-no-repeat py-24">
+    <div className="pb-[30px] md:pb-[70px] bg-timer-bg bg-cover bg-no-repeat bg-center py-24">
       <Container className="px-16 row">
         <h3 className="mb-2 text-3xl font-semibold">Big Sale Deal</h3>
-        <h2 className="mb-6 text-6xl font-bold text-red-light">Sale 40% Off</h2>
-        <div className="flex items-center gap-6">
-          <div className="flex flex-col items-center px-8 py-6 text-center bg-white">
-            <span className="!text-4xl font-semibold">60</span>
-            <p className="font-light text-slate-500">days</p>
-          </div>
-          <div className="flex flex-col items-center px-8 py-6 text-center bg-white">
-            <span className="text-4xl font-semibold">60</span>{" "}
-            <p className="font-light text-slate-500">hours</p>
-          </div>
-          <div className="flex flex-col items-center px-8 py-6 text-center bg-white">
-            <span className="text-4xl font-semibold">60</span>{" "}
-            <p className="font-light text-slate-500">minutes</p>
-          </div>
-          <div className="flex flex-col items-center px-8 py-6 text-center bg-white">
-            <span className="text-4xl font-semibold">60</span>{" "}
-            <p className="font-light text-slate-500">seconds</p>
-          </div>
+        <h2 className="mb-6 text-6xl font-bold text-red-light max-sm:text-5xl">
+          Sale 40% Off
+        </h2>
+        <CountdownTimer targetDate={dateTimeAfterThreeDays} />
+        <div className="flex max-sm:justify-center">
+          <Button className="!px-8 mt-6 max-sm:w-2/4 ">Shop Now</Button>
         </div>
-        <Button className="!px-8 mt-6">Shop Now</Button>
       </Container>
     </div>
   );
