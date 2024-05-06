@@ -1,7 +1,7 @@
 import { NoSSR } from "components";
 import ProductsGrid from "components/ProductsGrid";
 import { TEST_PRODUCT } from "data";
-import { HomeSlider, HomeSecondSection } from "features/home";
+import { HomeSlider, HomeSecondSection, HomeTimerSection } from "features/home";
 
 const Home = () => {
   return (
@@ -28,6 +28,7 @@ const Home = () => {
           TEST_PRODUCT,
         ]}
       />
+      <HomeTimerSection />
     </NoSSR>
   );
 };
