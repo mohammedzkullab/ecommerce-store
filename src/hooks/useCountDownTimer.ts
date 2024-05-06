@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+// TODO: should edit this to be persistent
+
 const useCountdown = (targetDate: number) => {
   const countDownDate = new Date(targetDate).getTime();
 
@@ -8,9 +10,6 @@ const useCountdown = (targetDate: number) => {
       countDownDate - new Date().getTime()
   );
 
-  useEffect(() => {
-    console.log(countDown);
-  }, [countDown]);
   useEffect(() => {
     const interval = setInterval(() => {
       setCountDown((prevCountDown) => {
@@ -27,7 +26,6 @@ const useCountdown = (targetDate: number) => {
 };
 
 const getReturnValues = (countDown: number) => {
-  // calculate time left
   const days = Math.floor(countDown / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
     (countDown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
