@@ -1,4 +1,4 @@
-import { NoSSR } from "components";
+import { HeadingWithDesc, NoSSR } from "components";
 import ProductsGrid from "components/ProductsGrid";
 import { TEST_PRODUCT } from "data";
 import { HomeSlider, HomeSecondSection, HomeTimerSection } from "features/home";
@@ -11,15 +11,12 @@ const Home = () => {
         <HomeSlider />
         <HomeSecondSection />
       </div>
-      <div className="container pt-8 text-center">
-        <div className="max-w-lg m-auto">
-          <h2 className="text-3xl font-bold ">Our Top Products</h2>
-          <p className="my-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            blandit massa enim Nullam nunc varius.
-          </p>
-        </div>
-      </div>
+      <HeadingWithDesc
+        heading="Our Top Products"
+        description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          blandit massa enim Nullam nunc varius."
+        className="pt-8"
+      />
       <ProductsGrid
         products={[
           TEST_PRODUCT,
