@@ -3,7 +3,7 @@ import { useCountdown } from "hooks";
 
 const ExpiredNotice = () => {
   return (
-    <div className="p-6 text-center">
+    <div className="p-6">
       <span className="text-4xl text-red-light">Discount Expired !!</span>
       <p>See you soon with more discounts ^_^.</p>
     </div>
