@@ -2,6 +2,7 @@ import { NoSSR } from "components";
 import ProductsGrid from "components/ProductsGrid";
 import { TEST_PRODUCT } from "data";
 import { HomeSlider, HomeSecondSection, HomeTimerSection } from "features/home";
+import HomeSpecialOffersSection from "features/home/components/HomeSpecialOffersSection";
 
 const Home = () => {
   return (
@@ -29,6 +30,7 @@ const Home = () => {
         ]}
       />
       <HomeTimerSection />
+      <HomeSpecialOffersSection />
     </NoSSR>
   );
 };
