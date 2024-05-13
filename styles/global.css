@@ -48,7 +48,7 @@
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  @apply text-gray-900 transition-all bg-white px-4 py-3 hover:bg-red-light hover:text-white !text-xl font-semibold;
+  @apply text-gray-900 transition-all bg-white px-2 py-1 md:px-4 md:py-3 hover:bg-red-light hover:text-white !text-lg md:!text-xl font-semibold rounded-md;
 }
 
 .image-backdrop:hover .back,
