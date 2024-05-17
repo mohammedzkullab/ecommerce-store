@@ -38,7 +38,7 @@ export const Slide = ({ slide, index }: { slide: any; index: number }) => {
       <div className="overlay"></div>
       <div className="flex flex-col items-center justify-center w-full h-full text-white ">
         {slide?.content?.badge && (
-          <p className="px-6 md:text-2xl bg-red-light ">
+          <p className="relative flex justify-center px-2 py-1 text-center md:text-2xl bg-red-light badge-striped">
             {slide?.content?.badge}
           </p>
         )}
