@@ -1,7 +1,8 @@
 import { Container, HeadingWithDesc } from "components";
 import React from "react";
 import BlogPost from "./BlogPost";
-import { BLOG_POST_ITEM } from "data";
+import { BLOG_POST_ITEM, BLOG_POST_ITEMS } from "data";
+import { BlogPostData } from "types";
 
 export const HomeBlogSection = () => {
   return (
@@ -12,9 +13,9 @@ export const HomeBlogSection = () => {
           blandit massa enim Nullam nunc varius."
       />
       <div className="grid grid-cols-1 gap-6 max-lg:grid-rows-3 lg:grid-cols-3 ">
-        <BlogPost postData={BLOG_POST_ITEM} />
-        <BlogPost postData={BLOG_POST_ITEM} />
-        <BlogPost postData={BLOG_POST_ITEM} />
+        {BLOG_POST_ITEMS.map((item: BlogPostData) => (
+          <BlogPost postData={item} key={item.id} />
+        ))}
       </div>
     </Container>
   );

@@ -83,7 +83,13 @@ export const BLOG_POST_ITEM = {
   title: "But I must explain to you how all this mistaken idea",
   commentsCount: 10,
   dateOfPublish: "2022-01-01",
-  image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+  image: "/assets/img/blog_post3.png",
   postContent:
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. In reprehenderit accusamus tenetur voluptate at esse expedita. Deleniti quaerat laboriosam saepe.",
 } as BlogPostData;
+
+export const BLOG_POST_ITEMS = [
+  BLOG_POST_ITEM,
+  BLOG_POST_ITEM,
+  BLOG_POST_ITEM,
+] as BlogPostData[];
