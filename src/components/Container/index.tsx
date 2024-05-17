@@ -1,8 +1,9 @@
+import clsx from "clsx";
 import React from "react";
-// import { Children } from "types";
 
-const Container = ({ children }: any) => {
-  return <div className="container">{children}</div>;
+const Container = ({ children, className }: any) => {
+  const classes = clsx("container", "max-md:px-4", className);
+  return <div className={classes}>{children}</div>;
 };
 
 export default Container;

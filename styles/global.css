@@ -48,10 +48,31 @@
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  @apply text-gray-900 transition-all bg-white px-4 py-3 hover:bg-red-light hover:text-white !text-xl font-semibold;
+  @apply text-gray-900 transition-all bg-white px-2 py-1 md:px-4 md:py-3 hover:bg-red-light hover:text-white !text-lg md:!text-xl font-semibold rounded-md;
 }
 
 .image-backdrop:hover .back,
 .image-backdrop:hover .add-to-cart {
   @apply !opacity-100 backdrop-brightness-75 z-[1];
+}
+
+.badge-striped::before,
+.badge-striped::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  display: block;
+  width: 0;
+  height: 0;
+  content: "";
+}
+.badge-striped::before {
+  right: 100%;
+  border: 20px solid #ff324d;
+  border-left-color: transparent;
+}
+.badge-striped::after {
+  left: 100%;
+  border: 20px solid #ff324d;
+  border-right-color: transparent;
 }

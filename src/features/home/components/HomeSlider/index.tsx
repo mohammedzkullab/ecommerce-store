@@ -26,7 +26,7 @@ export default HomeSlider;
 
 export const Slide = ({ slide, index }: { slide: any; index: number }) => {
   return (
-    <div className="h-full w-full">
+    <div className="w-full h-full">
       <Image
         src={slide?.image}
         alt={`image number ${index + 1}`}
@@ -36,14 +36,14 @@ export const Slide = ({ slide, index }: { slide: any; index: number }) => {
         className="slider-image"
       />
       <div className="overlay"></div>
-      <div className="flex flex-col items-center justify-center h-full w-full text-white ">
+      <div className="flex flex-col items-center justify-center w-full h-full text-white ">
         {slide?.content?.badge && (
-          <p className="md:text-2xl px-6 bg-red-light ">
+          <p className="relative flex justify-center px-2 py-1 text-center md:text-2xl bg-red-light badge-striped">
             {slide?.content?.badge}
           </p>
         )}
         {slide?.content?.heading && (
-          <p className="text-4xl md:text-7xl font-semibold my-4">
+          <p className="my-4 text-4xl font-semibold md:text-7xl">
             {slide?.content?.heading}
           </p>
         )}

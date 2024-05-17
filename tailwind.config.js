@@ -17,6 +17,7 @@ module.exports = {
       },
       backgroundImage: {
         "hero-image1": "url('/assets/img/1.png')",
+        "timer-bg": "url('/assets/img/furniture_banner3.jpg')",
       },
     },
   },

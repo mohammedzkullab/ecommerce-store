@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { Button, Card, Container, Link, Slider } from "components";
 import { HOMEPAGE_SECOND_SLIDES } from "data";
 import React from "react";
@@ -14,7 +15,7 @@ const BREAKPOINTS = {
 };
 export const HomeSecondSection = () => {
   return (
-    <div className="absolute z-[1] w-full -mt-14">
+    <div className="absolute z-[1] w-full -mt-14 !duration-0">
       <Container>
         <Card>
           <div className="items-center w-full grid-cols-3 gap-4 px-6 md:grid">
@@ -35,7 +36,7 @@ export const HomeSecondSection = () => {
                 slideShape={(slide: any, index: number) => (
                   <Slide slide={slide} index={index} />
                 )}
-                className="cursor-pointer"
+                className="cursor-pointer !duration-0 !ease-in-out"
                 slides={HOMEPAGE_SECOND_SLIDES}
                 breakpoints={BREAKPOINTS}
               />
@@ -57,18 +58,18 @@ type SlideProps = {
   className?: string;
 };
 const Slide = ({ slide, index, className }: SlideProps) => {
+  const classes = clsx(
+    "flex flex-col items-center justify-center gap-2 px-5 py-12 text-center truncate bg-gray-100 ",
+    className
+  );
   return (
-    <Link href="/shop">
-      <div
-        className={`flex flex-col items-center justify-center gap-2 px-5 py-12 text-center truncate bg-gray-100 text-black-primary hover:text-red-light ${
-          className || ""
-        }`}
-      >
-        <span>
-          {React.createElement(slide?.icon, {
-            className: "w-9 h-9",
-          })}
-        </span>
+    <Link href="/shop" className="!duration-0 hover:!text-red-light">
+      <div className={classes}>
+        {React.createElement(slide?.icon, {
+          className: "w-9 h-9",
+        })}
+
+        <p className="text-lg capitalize">{slide?.label}</p>
         <p className="text-lg capitalize">{slide?.label}</p>
       </div>
     </Link>

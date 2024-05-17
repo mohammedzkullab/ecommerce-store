@@ -19,3 +19,6 @@ export {
 } from "react-icons/hi2";
 
 export { IoIosShuffle as ShuffleIcon } from "react-icons/io";
+
+export { SlCalender as SlCalender } from "react-icons/sl";
+export { FaRegComments as CommentsIcon } from "react-icons/fa";
