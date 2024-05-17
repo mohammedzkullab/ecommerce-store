@@ -1,8 +1,13 @@
 import { HeadingWithDesc, NoSSR } from "components";
 import ProductsGrid from "components/ProductsGrid";
 import { TEST_PRODUCT } from "data";
-import { HomeSlider, HomeSecondSection, HomeTimerSection } from "features/home";
-import HomeSpecialOffersSection from "features/home/components/HomeSpecialOffersSection";
+import {
+  HomeSlider,
+  HomeSecondSection,
+  HomeTimerSection,
+  HomeSpecialOffersSection,
+  HomeBlogSection,
+} from "features/home";
 
 const Home = () => {
   return (
@@ -28,6 +33,7 @@ const Home = () => {
       />
       <HomeTimerSection />
       <HomeSpecialOffersSection />
+      <HomeBlogSection />
     </NoSSR>
   );
 };

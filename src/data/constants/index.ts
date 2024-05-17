@@ -2,7 +2,7 @@ import { IoBedOutline } from "react-icons/io5";
 import { MdOutlineBrunchDining } from "react-icons/md";
 import { TbSofa, TbArmchair2, TbLamp2 } from "react-icons/tb";
 import { GiOfficeChair } from "react-icons/gi";
-import { ProductType } from "types";
+import { BlogPostData, ProductType } from "types";
 
 export const HOMEPAGE_MAIN_SLIDES = [
   {
@@ -77,3 +77,13 @@ export const PRODUCTS_SLIDER_ITEMS = [
   TEST_PRODUCT,
   TEST_PRODUCT,
 ] as ProductType[];
+
+export const BLOG_POST_ITEM = {
+  id: 1,
+  title: "But I must explain to you how all this mistaken idea",
+  commentsCount: 10,
+  dateOfPublish: "2022-01-01",
+  image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+  postContent:
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. In reprehenderit accusamus tenetur voluptate at esse expedita. Deleniti quaerat laboriosam saepe.",
+} as BlogPostData;
