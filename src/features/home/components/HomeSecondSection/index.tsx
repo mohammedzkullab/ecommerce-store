@@ -36,7 +36,7 @@ export const HomeSecondSection = () => {
                 slideShape={(slide: any, index: number) => (
                   <Slide slide={slide} index={index} />
                 )}
-                className="cursor-pointer !duration-0 !ease-in-out"
+                className="cursor-pointer"
                 slides={HOMEPAGE_SECOND_SLIDES}
                 breakpoints={BREAKPOINTS}
               />
@@ -63,13 +63,12 @@ const Slide = ({ slide, index, className }: SlideProps) => {
     className
   );
   return (
-    <Link href="/shop" className="!duration-0 hover:!text-red-light">
+    <Link href="/shop" className="transition-colors hover:text-red-light">
       <div className={classes}>
         {React.createElement(slide?.icon, {
           className: "w-9 h-9",
         })}
 
-        <p className="text-lg capitalize">{slide?.label}</p>
         <p className="text-lg capitalize">{slide?.label}</p>
       </div>
     </Link>

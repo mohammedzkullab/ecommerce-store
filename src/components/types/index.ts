@@ -77,6 +77,16 @@ export interface SliderProps {
   lazyPreloadPrevNext?: number;
   loop?: boolean;
   breakpoints?: breakpointsType;
+  speed?: number;
+  effect?:
+    | "fade"
+    | "slide"
+    | "cube"
+    | "coverflow"
+    | "flip"
+    | "creative"
+    | "cards"
+    | undefined;
 }
 
 export type ImageGridType = {

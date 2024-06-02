@@ -1,3 +1,4 @@
+import { Transition } from "lib/@headlessUi";
 import { Footer, Navbar, ReturnTop } from "./components";
 import Head from "next/head";
 import { MainLayoutProps } from "types";
@@ -6,20 +7,31 @@ const MainLayout = ({
   children,
   mainClassName,
   title,
-  pageDescription = "Talents Valley platform",
+  pageDescription = "E-commerce Services",
 }: MainLayoutProps) => {
   return (
-    <div className="min-h-fit scroll-smooth relative">
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={pageDescription} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Navbar />
-      <main className={`${mainClassName ?? ""}`}>{children}</main>
-      <ReturnTop />
-      <Footer />
-    </div>
+    <Transition
+      show
+      appear
+      enter="transition-opacity duration-300"
+      enterFrom="opacity-0"
+      enterTo="opacity-100"
+      leave="transition-opacity duration-150"
+      leaveFrom="opacity-100"
+      leaveTo="opacity-0"
+    >
+      <div className="relative min-h-fit scroll-smooth">
+        <Head>
+          <title>{title}</title>
+          <meta name="description" content={pageDescription} />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Navbar />
+        <main className={`${mainClassName ?? ""}`}>{children}</main>
+        <ReturnTop />
+        <Footer />
+      </div>
+    </Transition>
   );
 };
 

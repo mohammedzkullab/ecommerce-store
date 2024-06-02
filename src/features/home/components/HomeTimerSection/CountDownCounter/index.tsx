@@ -22,22 +22,22 @@ const ShowCounter = ({
   seconds: number;
 }) => {
   return (
-    <div className="flex items-center justify-start gap-6 max-sm:flex-col">
-      <div className="flex flex-col items-center px-8 py-6 text-center bg-white w-[118px] max-sm:w-2/4">
-        <span className="!text-4xl font-semibold">{days}</span>
-        <p className="font-light text-slate-500">days</p>
+    <div className="flex items-center justify-start gap-2 transition-all duration-500 ease-in-out max-sm::flex-col md:gap-6 ">
+      <div className="flex flex-col items-center px-4 py-3 md:px-8 md:py-6 text-center bg-white w-[118px] max-sm:w-2/4">
+        <span className="text-xl font-semibold md:text-4xl">{days}</span>
+        <p className="font-light text-slate-500">Days</p>
       </div>
-      <div className="flex flex-col items-center px-8 py-6 text-center bg-white w-[118px] max-sm:w-2/4">
-        <span className="text-4xl font-semibold">{hours}</span>{" "}
-        <p className="font-light text-slate-500">hours</p>
+      <div className="flex flex-col items-center px-4 py-3 md:px-8 md:py-6 text-center bg-white w-[118px] max-sm:w-2/4">
+        <span className="text-xl font-semibold md:text-4xl">{hours}</span>{" "}
+        <p className="font-light text-slate-500">Hours</p>
       </div>
-      <div className="flex flex-col items-center px-8 py-6 text-center bg-white w-[118px] max-sm:w-2/4">
-        <span className="text-4xl font-semibold">{minutes}</span>{" "}
-        <p className="font-light text-slate-500">minutes</p>
+      <div className="flex flex-col items-center px-4 py-3 md:px-8 md:py-6 text-center bg-white w-[118px] max-sm:w-2/4">
+        <span className="text-xl font-semibold md:text-4xl">{minutes}</span>{" "}
+        <p className="font-light text-slate-500">Minutes</p>
       </div>
-      <div className="flex flex-col items-center px-8 py-6 text-center bg-white w-[118px] max-sm:w-2/4">
-        <span className="text-4xl font-semibold">{seconds}</span>{" "}
-        <p className="font-light text-slate-500">seconds</p>
+      <div className="flex flex-col items-center px-4 py-3 md:px-8 md:py-6 text-center bg-white w-[118px] max-sm:w-2/4">
+        <span className="text-xl font-semibold md:text-4xl">{seconds}</span>{" "}
+        <p className="font-light text-slate-500">Seconds</p>
       </div>
     </div>
   );
