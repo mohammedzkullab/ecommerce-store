@@ -18,7 +18,7 @@ const Product = ({ productData }: ProductProps) => {
   };
 
   return (
-    <Card className="relative my-2 border border-[#ddd] !transition-all !ease-in-out !duration-300 cursor-pointer !p-0 image-backdrop">
+    <Card className="relative my-2 border border-[#ddd] cursor-pointer !p-0 image-backdrop">
       <div className="relative flex items-center justify-center aspect-square md:p-4">
         <Image src={image} alt={title} width={280} height={357} />
         <div className="absolute flex items-center justify-center w-full h-full rounded-lg rounded-b-none opacity-0 back">

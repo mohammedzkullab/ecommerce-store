@@ -13,7 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export const Slider = ({
   slides,
-  className = "text-black ",
+  className = "text-black",
   slideShape,
   spaceBetween = 0,
   slidesPerView = 1,

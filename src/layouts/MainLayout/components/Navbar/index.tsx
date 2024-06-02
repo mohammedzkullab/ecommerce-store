@@ -24,11 +24,11 @@ export default function Navbar() {
         scrollPosition > 0
           ? "bg-gray-dark shadow-md"
           : "bg-transparent shadow-none",
-        "fixed w-full top-0 z-10  transition-all"
+        "fixed w-full top-0 z-10 "
       )}
     >
       <nav
-        className="container flex items-center justify-between p-4  lg:px-8"
+        className="container flex items-center justify-between p-4 lg:px-8"
         aria-label="Global"
       >
         <Logo />

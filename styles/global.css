@@ -15,10 +15,10 @@
 }
 
 * {
-  @apply !transition-all;
+  /* @apply transition-all duration-150; */
 }
 .btn {
-  @apply text-base font-medium transition-all;
+  @apply text-base font-medium;
   @apply p-2;
   @apply border rounded;
 }
@@ -39,7 +39,7 @@
 }
 
 .slider-image {
-  @apply absolute inset-0 w-full h-full z-[-1];
+  @apply absolute inset-0 w-full h-full z-[-1] object-fill;
 }
 .overlay {
   @apply absolute w-full h-full bg-black/50;
@@ -48,7 +48,7 @@
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  @apply text-gray-900 transition-all bg-white px-2 py-1 md:px-4 md:py-3 hover:bg-red-light hover:text-white !text-lg md:!text-xl font-semibold rounded-md;
+  @apply text-gray-900 bg-white px-2 py-1 md:px-4 md:py-3 hover:bg-red-light hover:text-white !text-lg md:!text-xl font-semibold rounded-md;
 }
 
 .image-backdrop:hover .back,

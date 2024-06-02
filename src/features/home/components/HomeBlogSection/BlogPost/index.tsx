@@ -8,7 +8,7 @@ export const BlogPost = ({ postData }: { postData: BlogPostData }) => {
     postData;
 
   return (
-    <Card className="relative my-2 border border-[#ddd] !transition-all !ease-in-out !duration-300 cursor-pointer !p-0 image-backdrop">
+    <Card className="relative my-2 border border-[#ddd] cursor-pointer !p-0 image-backdrop">
       <div className="relative flex items-center justify-center w-full md:p-2 hover:scale-90">
         <Image src={image} alt={title} width={350} height={300} />
       </div>
