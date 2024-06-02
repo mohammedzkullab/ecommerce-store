@@ -8,8 +8,11 @@ import {
   Keyboard,
   FreeMode,
   Autoplay,
+  EffectFade,
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/effect-fade";
+import "swiper/css";
 
 export const Slider = ({
   slides,
@@ -26,6 +29,7 @@ export const Slider = ({
   modules = [],
   lazyPreloadPrevNext = 1,
   loop = false,
+  speed = 400,
   breakpoints = {
     320: {
       slidesPerView: 2,
@@ -51,7 +55,7 @@ export const Slider = ({
       keyboard={keyboard}
       lazyPreloadPrevNext={lazyPreloadPrevNext}
       loop={loop}
-      speed={4000}
+      speed={speed}
       modules={[
         Navigation,
         Pagination,
@@ -62,6 +66,7 @@ export const Slider = ({
         ...modules,
       ]}
       breakpoints={breakpoints}
+      effect="fade"
       {...rest}
     >
       <div className="relative">

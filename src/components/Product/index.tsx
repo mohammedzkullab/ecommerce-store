@@ -18,7 +18,7 @@ const Product = ({ productData }: ProductProps) => {
   };
 
   return (
-    <Card className="relative my-2 border border-[#ddd] cursor-pointer !p-0 image-backdrop">
+    <Card className="relative my-2 border border-[#ddd] cursor-pointer !p-0 image-backdrop transition-all duration-500 ease-in-out">
       <div className="relative flex items-center justify-center aspect-square md:p-4">
         <Image src={image} alt={title} width={280} height={357} />
         <div className="absolute flex items-center justify-center w-full h-full rounded-lg rounded-b-none opacity-0 back">
@@ -37,7 +37,7 @@ const Product = ({ productData }: ProductProps) => {
         </p>
         <StarRating rate={rating?.rate} count={rating?.count} />
       </div>
-      <div className="absolute left-0 flex items-center justify-center w-full bg-white h-[65px] opacity-0 bottom-0 add-to-cart z-[100]">
+      <div className="absolute left-0 flex items-center justify-center w-full bg-white h-[65px] opacity-0 bottom-0 add-to-cart z-[100] rounded-xl">
         <Button
           variant="primary"
           className="my-auto"

@@ -1,6 +1,7 @@
 import { Button, Slider } from "components";
 import { HOMEPAGE_MAIN_SLIDES } from "data";
 import Image from "next/image";
+import { EffectFade } from "swiper";
 
 export const HomeSlider = () => {
   const breakpoints = {
@@ -14,6 +15,8 @@ export const HomeSlider = () => {
       slides={HOMEPAGE_MAIN_SLIDES}
       className="!h-[70vh] md:!h-screen"
       loop
+      effect="fade"
+      modules={[EffectFade]}
       breakpoints={breakpoints}
       mousewheel={false}
       slideShape={(slide: any, index: number) => (
