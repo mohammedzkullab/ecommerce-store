@@ -12,7 +12,8 @@ export const HomeSlider = () => {
   return (
     <Slider
       slides={HOMEPAGE_MAIN_SLIDES}
-      className="!h-screen"
+      className="!h-[70vh] md:!h-screen"
+      loop
       breakpoints={breakpoints}
       mousewheel={false}
       slideShape={(slide: any, index: number) => (
