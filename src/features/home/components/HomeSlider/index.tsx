@@ -54,7 +54,7 @@ export const Slide = ({ slide, index }: { slide: any; index: number }) => {
         {slide?.content?.paragraph && (
           <p className="text-lg">{slide?.content?.paragraph}</p>
         )}
-        <Button variant="secondary" className="px-8 md:w-[200px] !py-4 my-4">
+        <Button variant="secondary" className="px-8 md:w-[200px] md:!py-4 my-4">
           shop now
         </Button>
       </div>
