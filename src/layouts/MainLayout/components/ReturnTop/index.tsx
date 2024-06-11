@@ -1,3 +1,4 @@
+"use client";
 import { Button, Link } from "components";
 import { useScrollPosition } from "layouts/MainLayout/hooks";
 import { ChevronDownIcon } from "lib/@heroicons";

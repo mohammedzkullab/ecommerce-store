@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { SliderProps } from "../types";
 
@@ -9,7 +10,7 @@ import {
   FreeMode,
   Autoplay,
   EffectFade,
-} from "swiper";
+} from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/effect-fade";
 import "swiper/css";

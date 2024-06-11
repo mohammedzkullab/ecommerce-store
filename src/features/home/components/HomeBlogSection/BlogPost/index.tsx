@@ -1,3 +1,4 @@
+"use client";
 import { Card, Link } from "components";
 import Image from "next/image";
 import { SlCalender, CommentsIcon } from "lib/@heroicons";
@@ -8,9 +9,15 @@ export const BlogPost = ({ postData }: { postData: BlogPostData }) => {
     postData;
 
   return (
-    <Card className="relative my-2 border border-[#ddd] !p-0 image-backdrop ">
-      <div className="relative flex items-center justify-center w-full transition-all duration-150 ease-in-out md:p-2 hover:scale-90">
-        <Image src={image} alt={title} width={350} height={300} />
+    <Card className="relative my-2 border border-[#ddd] !p-0 image-backdrop overflow-hidden">
+      <div className="relative flex items-center justify-center w-full transition-all duration-300 ease-in-out hover:scale-[1.05] overflow-hidden">
+        <Image
+          src={image}
+          alt={title}
+          width={350}
+          height={300}
+          className="w-full h-full max-h-[350px]"
+        />
       </div>
       <div className="p-6 product-details">
         <Link href={`/blog/${id}`}>

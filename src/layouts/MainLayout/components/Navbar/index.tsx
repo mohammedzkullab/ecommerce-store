@@ -1,4 +1,5 @@
-import { useState } from "react";
+"use client";
+import { useEffect, useState } from "react";
 
 import { Dialog, Transition } from "lib/@headlessUi";
 import {
@@ -53,7 +54,7 @@ export default function Navbar() {
       <Transition show={mobileMenuOpen}>
         <Dialog
           as="div"
-          className="lg:hidden "
+          className="lg:hidden"
           open={mobileMenuOpen}
           onClose={setMobileMenuOpen}
         >

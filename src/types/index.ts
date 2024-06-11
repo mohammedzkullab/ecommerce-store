@@ -6,8 +6,6 @@ export type Children = ReactNode;
 
 export interface MainLayoutProps {
   children: Children;
-  title: string;
-  pageDescription?: string;
   mainClassName?: string;
 }
 
