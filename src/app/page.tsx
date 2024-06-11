@@ -1,4 +1,5 @@
-import { HeadingWithDesc, NoSSR } from "components";
+"use client";
+import { HeadingWithDesc } from "components";
 import ProductsGrid from "components/ProductsGrid";
 import { TEST_PRODUCT } from "data";
 import {
@@ -11,7 +12,7 @@ import {
 
 const Home = () => {
   return (
-    <NoSSR>
+    <>
       <div className="relative pb-96 md:pb-52">
         <HomeSlider />
         <HomeSecondSection />
@@ -34,13 +35,13 @@ const Home = () => {
       <HomeTimerSection />
       <HomeSpecialOffersSection />
       <HomeBlogSection />
-    </NoSSR>
+    </>
   );
 };
 
-Home.mainLayoutProps = {
-  title: "E-commerce Store | Home",
-  description: "E-commerce Store | Home page",
-  mainClassName: "pb-32",
-};
+// Home.mainLayoutProps = {
+//   title: "E-commerce Store | Home",
+//   description: "E-commerce Store | Home page",
+//   mainClassName: "pb-32",
+// };
 export default Home;

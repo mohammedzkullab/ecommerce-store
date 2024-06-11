@@ -1,28 +1,36 @@
+"use client";
 import { useEffect, useState } from "react";
-
-// TODO: should edit this to be persistent
 
 const useCountdown = (targetDate: number) => {
   const countDownDate = new Date(targetDate).getTime();
-
-  const [countDown, setCountDown] = useState(
-    parseInt(localStorage.getItem("countdown") as string) ||
-      countDownDate - new Date().getTime()
-  );
+  const [countDown, setCountDown] = useState<number | null>(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCountDown((prevCountDown) => {
-        const newCountDown = countDownDate - new Date().getTime();
-        localStorage.setItem("countdown", newCountDown.toString());
-        return newCountDown;
-      });
-    }, 1000);
-
-    return () => clearInterval(interval);
+    if (typeof window !== "undefined") {
+      const savedCountdown = localStorage.getItem("countdown");
+      setCountDown(
+        savedCountdown
+          ? parseInt(savedCountdown)
+          : countDownDate - new Date().getTime()
+      );
+    }
   }, [countDownDate]);
 
-  return getReturnValues(countDown);
+  useEffect(() => {
+    if (countDown !== null) {
+      const interval = setInterval(() => {
+        setCountDown((prevCountDown) => {
+          const newCountDown = countDownDate - new Date().getTime();
+          localStorage.setItem("countdown", newCountDown.toString());
+          return newCountDown;
+        });
+      }, 1000);
+
+      return () => clearInterval(interval);
+    }
+  }, [countDownDate, countDown]);
+
+  return countDown !== null ? getReturnValues(countDown) : [0, 0, 0, 0];
 };
 
 const getReturnValues = (countDown: number) => {

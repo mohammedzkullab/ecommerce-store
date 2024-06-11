@@ -1,7 +1,7 @@
 import { Button, Slider } from "components";
 import { HOMEPAGE_MAIN_SLIDES } from "data";
 import Image from "next/image";
-import { EffectFade } from "swiper";
+import { EffectFade } from "swiper/modules";
 
 export const HomeSlider = () => {
   const breakpoints = {
@@ -16,7 +16,7 @@ export const HomeSlider = () => {
       className="!h-[70vh] md:!h-screen"
       loop
       effect="fade"
-      modules={[EffectFade]}
+      // modules={[EffectFade]}
       breakpoints={breakpoints}
       mousewheel={false}
       slideShape={(slide: any, index: number) => (
@@ -37,12 +37,12 @@ export const Slide = ({ slide, index }: { slide: any; index: number }) => {
         width={1500}
         height={1500}
         priority={true}
-        className="slider-image"
+        className="!object-cover slider-image"
       />
       <div className="overlay"></div>
       <div className="flex flex-col items-center justify-center w-full h-full text-white ">
         {slide?.content?.badge && (
-          <p className="relative flex justify-center px-2 py-1 text-center md:text-2xl bg-red-light badge-striped">
+          <p className="relative flex justify-center px-2 py-1 text-xl text-center bg-red-light badge-striped">
             {slide?.content?.badge}
           </p>
         )}

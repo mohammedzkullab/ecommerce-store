@@ -68,11 +68,11 @@
 }
 .badge-striped::before {
   right: 100%;
-  border: 20px solid #ff324d;
+  border: 18px solid #ff324d;
   border-left-color: transparent;
 }
 .badge-striped::after {
   left: 100%;
-  border: 20px solid #ff324d;
+  border: 18px solid #ff324d;
   border-right-color: transparent;
 }

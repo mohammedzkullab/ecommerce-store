@@ -1,3 +1,4 @@
+"use client";
 import { Product, Slider } from "components";
 import { PRODUCTS_SLIDER_ITEMS } from "data";
 import { ProductType } from "types";

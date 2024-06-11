@@ -1,3 +1,4 @@
+"use client";
 import { Link } from "components";
 import { ImageGridProps, ImageGridType } from "components/types";
 import Image from "next/image";
