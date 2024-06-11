@@ -18,7 +18,7 @@ export const HomeSecondSection = () => {
     <div className="absolute z-[1] w-full -mt-14 !duration-0">
       <Container>
         <Card>
-          <div className="items-center w-full grid-cols-3 gap-4 px-6 md:grid">
+          <div className="items-center w-full grid-cols-3 gap-4 md:px-6 md:grid">
             <div className="text-center md:text-left">
               <h3 className="text-2xl font-medium">Top Categories</h3>
               <p className="my-3 text-lg md:w-4/5 whitespace-wrap">
