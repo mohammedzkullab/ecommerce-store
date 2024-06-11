@@ -8,7 +8,7 @@ export const HomeTimerSection = () => {
 
   const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
   return (
-    <div className="pb-[30px] md:pb-[70px] bg-timer-bg !bg-cover bg-no-repeat bg-center py-24">
+    <div className=" bg-timer-bg !bg-cover bg-no-repeat bg-center py-12 md:py-24">
       <Container className="px-16 row">
         <h3 className="mb-2 text-3xl font-semibold">Big Sale Deal</h3>
         <h2 className="mb-6 text-6xl font-bold text-red-light max-sm:text-5xl">

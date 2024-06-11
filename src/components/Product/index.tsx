@@ -38,7 +38,7 @@ const Product = ({ productData }: ProductProps) => {
         </p>
         <StarRating rate={rating?.rate} count={rating?.count} />
       </div>
-      <div className="absolute left-0 flex items-center justify-center w-full bg-white h-[65px] opacity-0 bottom-0 add-to-cart z-[100] rounded-xl">
+      <div className="absolute left-0 flex items-center justify-center w-full bg-white h-[65px] opacity-0 bottom-0 add-to-cart z-[100] rounded-xl transition-all duration-300">
         <Button
           variant="primary"
           className="my-auto"
