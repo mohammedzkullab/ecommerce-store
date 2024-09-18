@@ -2,6 +2,10 @@
 import { Transition } from "lib/@headlessUi";
 import { Footer, Navbar, ReturnTop } from "./components";
 import { MainLayoutProps } from "types";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const MainLayout = ({ children, mainClassName }: MainLayoutProps) => {
   return (

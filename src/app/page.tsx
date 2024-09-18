@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { HeadingWithDesc } from "components";
 import ProductsGrid from "components/ProductsGrid";
 import { TEST_PRODUCT } from "data";
@@ -39,9 +39,4 @@ const Home = () => {
   );
 };
 
-// Home.mainLayoutProps = {
-//   title: "E-commerce Store | Home",
-//   description: "E-commerce Store | Home page",
-//   mainClassName: "pb-32",
-// };
 export default Home;

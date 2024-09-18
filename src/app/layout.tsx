@@ -1,10 +1,6 @@
 import MainLayout from "layouts/MainLayout";
 import { Metadata } from "next";
 import "../../styles/global.css";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 export const metadata: Metadata = {
   title: "Home",

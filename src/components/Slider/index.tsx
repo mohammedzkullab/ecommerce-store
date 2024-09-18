@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { SliderProps } from "../types";
 
@@ -23,8 +22,8 @@ export const Slider = ({
   slidesPerView = 1,
   navigation = true,
   pagination,
-  onSwiper = console.log,
-  onSlideChange = console.log,
+  onSwiper = () => {},
+  onSlideChange = () => {},
   mousewheel = true,
   keyboard = true,
   modules = [],
@@ -42,42 +41,40 @@ export const Slider = ({
     },
   },
   ...rest
-}: SliderProps) => {
-  return (
-    <Swiper
-      // spaceBetween={spaceBetween}
-      // slidesPerView={slidesPerView}
-      navigation={navigation}
-      pagination={...pagination}
-      onSwiper={() => onSwiper()}
-      onSlideChange={() => onSlideChange()}
-      // cssMode={cssMode}
-      // mousewheel={mousewheel}
-      keyboard={keyboard}
-      lazyPreloadPrevNext={lazyPreloadPrevNext}
-      loop={loop}
-      speed={speed}
-      modules={[
-        Navigation,
-        Pagination,
-        // Mousewheel,
-        Keyboard,
-        FreeMode,
-        Autoplay,
-        ...modules,
-      ]}
-      breakpoints={breakpoints}
-      effect="fade"
-      {...rest}
-    >
-      <div className="relative">
-        {slides?.map((slide, index) => (
-          <SwiperSlide key={index} className={`${className ?? ""}`}>
-            {slideShape(slide, index)}
-          </SwiperSlide>
-        ))}
-      </div>
-    </Swiper>
-  );
-};
+}: SliderProps) => (
+  <Swiper
+    // spaceBetween={spaceBetween}
+    // slidesPerView={slidesPerView}
+    navigation={navigation}
+    pagination={...pagination}
+    onSwiper={() => onSwiper()}
+    onSlideChange={() => onSlideChange()}
+    // cssMode={cssMode}
+    // mousewheel={mousewheel}
+    keyboard={keyboard}
+    lazyPreloadPrevNext={lazyPreloadPrevNext}
+    loop={loop}
+    speed={speed}
+    modules={[
+      Navigation,
+      Pagination,
+      // Mousewheel,
+      Keyboard,
+      FreeMode,
+      Autoplay,
+      ...modules,
+    ]}
+    breakpoints={breakpoints}
+    effect="fade"
+    {...rest}
+  >
+    <div className="relative">
+      {slides?.map((slide, index) => (
+        <SwiperSlide key={index} className={`${className ?? ""}`}>
+          {slideShape(slide, index)}
+        </SwiperSlide>
+      ))}
+    </div>
+  </Swiper>
+);
 export default Slider;
