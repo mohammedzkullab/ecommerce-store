@@ -10,6 +10,22 @@ module.exports = {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ["images.unsplash.com", "source.unsplash.com", "fakestoreapi.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "source.unsplash.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "fakestoreapi.com",
+        port: "",
+      },
+    ],
   },
 };
