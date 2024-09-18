@@ -11,4 +11,5 @@ export { default as Product } from "./Product";
 export { default as StarRating } from "./StarRating";
 export { default as Container } from "./Container";
 export { default as HeadingWithDesc } from "./HeadingWithDesc";
+export { default as Providers } from "./Providers";
 export * from "./types";
